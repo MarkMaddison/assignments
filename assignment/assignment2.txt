@@ -1,0 +1,31 @@
+print("Covid-19 Risk of Death Test")
+print()
+age = input("Q1 - Are you a cigarette addict older than 75 years old? (yes or no)")
+chronic = input("Q2 - Do you have a severe chronic disease)? (yes or no)")
+immune = input("Q3 - Is your immune system too weak? (Yes or No)")
+if age == "yes":
+    age = True
+elif age == ("no" or "No" or "n" or "N"):
+    age = False
+else :
+    age = None
+    print("Your answer is wrong, please try again")
+if chronic == "yes":
+    chronic = True
+elif chronic == "no":
+    chronic = False
+else :
+    chronic = None
+    print("Your answer is wrong, please try again")
+if immune == "yes":
+    immune = True
+elif immune == "no":
+    immune = False
+else :
+    immune = None
+    print("Your answer is wrong, please try again")
+risk = age and (chronic or immune)
+if risk == True:
+    print("You are in risky group")
+else:
+    print("You are not in risky group")
