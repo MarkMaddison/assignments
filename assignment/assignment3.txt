@@ -1,0 +1,31 @@
+num = input("Enter an integer number :" )
+lst = list(num)
+abc = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','-','.',',']
+a = True
+for i in lst:
+    if i not in abc:
+        print("Do not use any entries other than numeric values")
+        a = False
+        break
+for i in lst:        
+    if i == "." or i == ",":
+        print(" Please enter an integer number")
+        a = False
+        break
+for i in lst: 
+    if  a != False and int(num) < 0 :
+        print("Please enter a positive number")
+        a = False
+        break
+top = 0
+if a != False:
+    neg = int(num)
+    for i in lst:
+        t=int(i)**3
+        top = top+t
+    if top == neg:
+        print(neg,"is an Armstrong number")
+    else:
+        print(neg,"is not an Armstrong number")
+else:
+    print("Please try again")
