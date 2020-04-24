@@ -1,0 +1,12 @@
+primecheck = int(input("Enter a number"))
+i = 2
+check = 0
+
+while i <= primecheck:
+    if primecheck % i == 0:
+        check +=1
+    i +=1
+if check > 1:
+    print(primecheck, "is not an prime number")
+else:
+    print(primecheck, "is a prime number")
