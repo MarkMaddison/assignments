@@ -1,0 +1,7 @@
+user_input = input("Enter your text here : ")
+user_2 = list(user_input)
+dict_1 = {}
+for i in user_2:
+    x = user_2.count(i)
+    dict_1 [i] = x
+print(dict_1)
