@@ -1,4 +1,4 @@
-a = {'Mark':'05003002010','Edwarth':'05325323200','David':'321'}
+a = {'Mark':'05003002010','Edward':'05325323200','David':'05423202010'}
 b = a.items()
 print() 
 for i in a.keys():
