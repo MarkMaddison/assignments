@@ -1,4 +1,4 @@
-a = {'Mark ':'05003002010','Edward':'05325323200','David':'05425420000'}
+a = {'Mark':'05003002010','Edwarth':'05325323200','David':'321'}
 b = a.items()
 print() 
 for i in a.keys():
@@ -10,6 +10,7 @@ while x == True:
     choice = input('Your choice : ')
     if choice not in ("1","2","3","4","5","6","7","8","9","0"):
         print("Please enter your choice between (1-5)")
+        print()
     else : 
         choice = int(choice)
     if choice == 1:
@@ -20,26 +21,32 @@ while x == True:
         print()
     elif choice == 2:
         ed = input("Which log? : ")
-        ed1 = input("Enter new name : ")
-        ed2 = input("Input new number : ")
-        del a[ed]
-        a[ed1] = ed2
-        print(ed1,"-",ed2, "saved")
-        print()
+        if ed in a.keys():
+            ed1 = input("Enter new name : ")
+            ed2 = input("Input new number : ")
+            del a[ed]
+            a[ed1] = ed2
+            print(ed1,"-",ed2, "saved")
+            print()
+        else :
+            print(ed,"Not found in phonebook")
+            print()
     elif choice == 3:
         rm = input("Which log? : ")
-        del a[rm]
-        print(rm, "Deleted succesfully")
+        if rm in a.keys():
+            del a[rm]
+            print(rm, "Deleted succesfully")
+        else :    
+            print(rm,"Not found in phonebook")
         print()
     elif choice == 4:
-        print("-----------")
         for i in a.keys():
             print(i, "-", a[i])
-        print("-----------")
-    elif choice not in range (1,6):
         print()
-        print("Please enter your choice between (1-5)")
-        print()
+    # elif choice not in range (1,6):
+    #     print()
+    #     print("Please enter your choice between (1-5)")
+    #     print()
     elif choice == 5:
         x = False
 
